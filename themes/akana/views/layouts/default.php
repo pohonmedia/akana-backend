@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="../../assets/css/plugin.min.css">
+    <link rel="stylesheet" href="<?php echo $theme_assets . 'assets/css/plugin.min.css'; ?>">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="../../assets/css/main.min.css">
+    <link rel="stylesheet" href="<?php echo $theme_assets . 'assets/css/main.min.css'; ?>">
 
     <title>Homepage</title>
   </head>
@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" id="navbarMain">
 
       <a class="navbar-brand" href="#">
-        <img src="assets/img/logo--new.png" width="60" height="60" alt="logo" class="img-fluid">
+        <img src="<?php echo $theme_assets . 'assets/img/logo--new.png'; ?>" width="60" height="60" alt="logo" class="img-fluid">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,17 +32,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/index.html">Homepage
+            <a class="nav-link" href="#">Homepage
               <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/package-list.html">Tour & Travel</a>
+            <a class="nav-link" href="#">Tour & Travel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/mice-list.html">Other Package</a>
+            <a class="nav-link" href="#">Other Package</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about-us.html">About Us</a>
+            <a class="nav-link" href="#">About Us</a>
           </li>
           <form class="form-inline my-2 my-lg-0">
             <button class="btn btn-outline-success my-2 my-sm-0 btn--primary" id="contact">Contact Us</button>
@@ -64,7 +64,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./assets/img/bg--1.jpg" class="d-block w-100" alt="slide-img">
+          <img src="<?php echo $theme_assets . 'assets/img/bg--1.jpg'; ?>" class="d-block w-100" alt="slide-img">
           <div class="overlay"></div>
           <div class="carousel-caption d-none d-md-block">
             <h5>Destinasi Wisata Terbaik</h5>
@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./assets/img/bg--2.jpg" class="d-block w-100" alt="slide-img">
+          <img src="<?php echo $theme_assets . 'assets/img/bg--2.jpg'; ?>" class="d-block w-100" alt="slide-img">
           <div class="overlay"></div>
           <div class="carousel-caption d-none d-md-block">
             <h5>Pelayanan Terbaik</h5>
@@ -83,7 +83,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="./assets/img/bg--3.jpg" class="d-block w-100" alt="slide-img">
+          <img src="<?php echo $theme_assets . 'assets/img/bg--3.jpg'; ?>" class="d-block w-100" alt="slide-img">
           <div class="overlay"></div>
           <div class="carousel-caption d-none d-md-block">
             <h5>Wisata Terbaik</h5>
@@ -197,7 +197,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-product">
-                    <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                    <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                     <div class="card-body">
                       <h5 class="card-title">
                         Borobudur trip 1
@@ -224,7 +224,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-product">
-                    <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                    <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                     <div class="card-body">
                       <h5 class="card-title">
                         Borobudur trip 2
@@ -251,7 +251,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-product">
-                    <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                    <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                     <div class="card-body">
                       <h5 class="card-title">
                         Borobudur trip 3
@@ -278,7 +278,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-product">
-                    <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                    <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                     <div class="card-body">
                       <h5 class="card-title">
                         Borobudur trip 4
@@ -305,7 +305,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-product">
-                    <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                    <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                     <div class="card-body">
                       <h5 class="card-title">
                         Borobudur trip 5
@@ -353,7 +353,7 @@
               <div class="col-lg-6 col-md-6">
                 <!-- card content #1 start here -->
                 <div class="card text-white c-card-destination">
-                  <img src="./assets/img/dest--1.jpg" class="card-img img-fluid" alt="background-image">
+                  <img src="<?php echo $theme_assets . 'assets/img/dest--1.jpg'; ?>" class="card-img img-fluid" alt="background-image">
                   <div class="overlay"></div>
                   <div class="card-img-overlay">
                     <h5 class="card-title">surakarta</h5>
@@ -370,7 +370,7 @@
               <div class="col-lg-6 col-md-6">
                 <!-- card content #2 start here -->
                 <div class="card text-white c-card-destination">
-                  <img src="./assets/img/dest--2.jpg" class="card-img img-fluid" alt="background-image">
+                  <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img img-fluid" alt="background-image">
                   <div class="overlay"></div>
                   <div class="card-img-overlay">
                     <h5 class="card-title">bali</h5>
@@ -388,7 +388,7 @@
               <div class="col-lg-6 col-md-6">
                 <!-- card content #3 start here -->
                 <div class="card text-white c-card-destination">
-                  <img src="./assets/img/dest--2.jpg" class="card-img img-fluid" alt="background-image">
+                  <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img img-fluid" alt="background-image">
                   <div class="overlay"></div>
                   <div class="card-img-overlay">
                     <h5 class="card-title">bali</h5>
@@ -406,7 +406,7 @@
               <div class="col-lg-6 col-md-6">
                 <!-- card content #4 start here -->
                 <div class="card text-white c-card-destination">
-                  <img src="./assets/img/dest--1.jpg" class="card-img img-fluid" alt="background-image">
+                  <img src="<?php echo $theme_assets . 'assets/img/dest--1.jpg'; ?>" class="card-img img-fluid" alt="background-image">
                   <div class="overlay"></div>
                   <div class="card-img-overlay">
                     <h5 class="card-title">surakarta</h5>
@@ -424,7 +424,7 @@
               <div class="col-lg-6 col-md-6">
                 <!-- card content #5 start here -->
                 <div class="card text-white c-card-destination">
-                  <img src="./assets/img/dest--1.jpg" class="card-img img-fluid" alt="background-image">
+                  <img src="<?php echo $theme_assets . 'assets/img/dest--1.jpg'; ?>" class="card-img img-fluid" alt="background-image">
                   <div class="overlay"></div>
                   <div class="card-img-overlay">
                     <h5 class="card-title">surakarta</h5>
@@ -442,7 +442,7 @@
               <div class="col-lg-6 col-md-6">
                 <!-- card content #6 start here -->
                 <div class="card text-white c-card-destination">
-                  <img src="./assets/img/dest--2.jpg" class="card-img img-fluid" alt="background-image">
+                  <img src="<?php echo $theme_assets . 'assets/img/dest--2.jpg'; ?>" class="card-img img-fluid" alt="background-image">
                   <div class="overlay"></div>
                   <div class="card-img-overlay">
                     <h5 class="card-title">bali</h5>
@@ -505,7 +505,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-img">
-                    <img src="./assets/img/bg--6.jpg" class="card-img-top" alt="card image" style="z-index:0;">
+                    <img src="<?php echo $theme_assets . 'assets/img/bg--6.jpg'; ?>" class="card-img-top" alt="card image" style="z-index:0;">
                     <span class="o-title">
                       Event Name #1
                     </span>
@@ -520,7 +520,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-img">
-                    <img src="./assets/img/bg--7.jpg" class="card-img-top" alt="card image" style="z-index:0;">
+                    <img src="<?php echo $theme_assets . 'assets/img/bg--7.jpg'; ?>" class="card-img-top" alt="card image" style="z-index:0;">
                     <span class="o-title">
                       Event Name #2
                     </span>
@@ -535,7 +535,7 @@
                 <!--carousel card #1 start here-->
                 <div class="col">
                   <div class="card c-card-img">
-                    <img src="./assets/img/bg--8.jpg" class="card-img-top" alt="card image" style="z-index:0;">
+                    <img src="<?php echo $theme_assets . 'assets/img/bg--8.jpg'; ?>" class="card-img-top" alt="card image" style="z-index:0;">
                     <span class="o-title">
                       Event Name #3
                     </span>
@@ -607,7 +607,7 @@
           <!-- Recent work content start here -->
           <div class="col-lg-4 c-img">
             <div class="card text-white">
-              <img src="./assets/img/bg--6.jpg" class="card-img" alt="recent works image">
+              <img src="<?php echo $theme_assets . 'assets/img/bg--6.jpg'; ?>" class="card-img" alt="recent works image">
               <div class="overlay card-img-overlay text-left">
                 <div class="c-content">
                   <h5 class="card-title">Event Name #1</h5>
@@ -620,7 +620,7 @@
           <!-- Recent work content start here -->
           <div class="col-lg-4 c-img">
             <div class="card text-white">
-              <img src="./assets/img/bg--7.jpg" class="card-img" alt="recent works image">
+              <img src="<?php echo $theme_assets . 'assets/img/bg--7.jpg'; ?>" class="card-img" alt="recent works image">
               <div class="card-img-overlay text-left">
                 <div class="c-content">
                   <h5 class="card-title">Event Name #2</h5>
@@ -633,7 +633,7 @@
           <!-- Recent work content start here -->
           <div class="col-lg-4 c-img">
             <div class="card text-white">
-              <img src="./assets/img/bg--8.jpg" class="card-img" alt="recent works image">
+              <img src="<?php echo $theme_assets . 'assets/img/bg--8.jpg'; ?>" class="card-img" alt="recent works image">
               <div class="card-img-overlay text-left">
                 <div class="c-content">
                   <h5 class="card-title">Event Name #3</h5>
@@ -655,10 +655,10 @@
       <div class="col-lg-4 c-img">
         <h5>About us</h5>
         <div class="card text-white mt-2 img-behind d-none d-sm-block">
-          <img src="./assets/img/bg--10.png" class="card-img" alt="...">
+          <img src="<?php echo $theme_assets . 'assets/img/bg--10.png'; ?>" class="card-img" alt="...">
         </div>
         <div class="card text-white mt-4 img-top">
-          <img src="./assets/img/bg--9.jpg" class="card-img " alt="...">
+          <img src="<?php echo $theme_assets . 'assets/img/bg--9.jpg'; ?>" class="card-img " alt="...">
         </div>
       </div>
       <div class="col-lg-8 c-wording d-flex justify-content-center mb-4">
@@ -781,7 +781,7 @@
       <!-- Content block end here -->
 
       <!-- Main Javascript -->
-      <script src="./assets/js/plugin.min.js"></script>
-      <script src="./assets/js/main.js"></script>
+      <script src="<?php echo $theme_assets . 'assets/js/plugin.min.js'; ?>"></script>
+      <script src="<?php echo $theme_assets . 'assets/js/main.js'; ?>"></script>
     </body>
   </html>
