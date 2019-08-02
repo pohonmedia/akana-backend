@@ -33,10 +33,6 @@
                         <?php echo form_dropdown('prod_subcategory', $subcat_data, $prod_subcategory_val, $prod_subcategory); ?>
                     </div>
                     <div class="form-group">
-                        <label for="prod_type" class="control-label">Type Product</label>
-                        <?php echo form_dropdown('prod_type', $type_data, $prod_type_val, $prod_type); ?>
-                    </div>
-                    <div class="form-group">
                         <label for="prod_desc" class="control-label">Content</label>
                         <?php echo form_textarea($prod_desc); ?>
                     </div>
@@ -73,10 +69,6 @@
                     <div class="form-group">
                         <label for="prod_location" class="control-label">Location</label>
                         <?php echo form_input($prod_location); ?>
-                    </div>
-                    <div class="form-group">
-                        <label for="prod_status" class="control-label">Status Product</label>
-                        <?php echo form_dropdown('prod_status', $status_data, $prod_status_val, $prod_status); ?>
                     </div>
                     <div class="form-group">
                         <label for="prod_tags" class="control-label">Tags</label>

@@ -94,8 +94,6 @@ class Admin extends Admin_Controller {
                 'prod_subcategory' => $this->input->post('prod_subcategory'),
                 'prod_price' => $this->input->post('prod_price'),
                 'prod_location' => $this->input->post('prod_location'),
-                'prod_status' => $this->input->post('prod_status'),
-                'prod_type' => $this->input->post('prod_type'),
                 'prod_desc' => $this->input->post('prod_desc'),
                 'prod_tags' => $this->input->post('prod_tags'),
                 'meta_desc' => $this->input->post('meta_desc'),
@@ -171,11 +169,6 @@ class Admin extends Admin_Controller {
             'value' => $this->form_validation->set_value('prod_location'),
         );
 
-        $this->data['status_data'] = $this->kondisi;
-        $this->data['prod_status'] = 'placeholder="Product Status" class="form-control"';
-        $this->data['type_data'] = $this->type;
-        $this->data['prod_type'] = 'placeholder="Product Type" class="form-control"';
-
         $this->data['prod_desc'] = array(
             'name' => 'prod_desc',
             'id' => 'desc_area',
@@ -237,8 +230,6 @@ class Admin extends Admin_Controller {
                 'prod_subcategory' => $this->input->post('prod_subcategory'),
                 'prod_price' => $this->input->post('prod_price'),
                 'prod_location' => $this->input->post('prod_location'),
-                'prod_status' => $this->input->post('prod_status'),
-                'prod_type' => $this->input->post('prod_type'),
                 'prod_desc' => $this->input->post('prod_desc'),
                 'prod_tags' => $this->input->post('prod_tags'),
                 'meta_desc' => $this->input->post('meta_desc'),
@@ -315,13 +306,6 @@ class Admin extends Admin_Controller {
             'class' => 'form-control',
             'value' => $this->form_validation->set_value('prod_location', $prod_detail->prod_location),
         );
-
-        $this->data['status_data'] = $this->kondisi;
-        $this->data['prod_status'] = 'placeholder="Product Status" class="form-control"';
-        $this->data['prod_status_val'] = $prod_detail->prod_status;
-        $this->data['type_data'] = $this->type;
-        $this->data['prod_type'] = 'placeholder="Product Type" class="form-control"';
-        $this->data['prod_type_val'] = $prod_detail->prod_type;
 
         $this->data['prod_desc'] = array(
             'name' => 'prod_desc',
