@@ -82,14 +82,15 @@
         <div class="container">
             <div class="row">
                 <?php
-                if (!empty($template['partials']['left_sidebar'])) {
-                    echo '<div class="col-md-3">';
-                    echo $template['partials']['left_sidebar'];
-                    echo '</div>';
-                    echo '<div class="col-md-8">';
-                } else {
-                    echo '<div class="col-md-12">';
-                }
+                // if (!empty($template['partials']['left_sidebar'])) {
+                //     echo '<div class="col-md-3">';
+                //     echo $template['partials']['left_sidebar'];
+                //     echo '</div>';
+                //     echo '<div class="col-md-8">';
+                // } else {
+                //     echo '<div class="col-md-12">';
+                // }
+                echo '<div class="col-md-12">';
                 echo $template['body'];
                 echo'</div>';
                 ?>

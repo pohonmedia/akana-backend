@@ -1,0 +1,34 @@
+//import utilities
+@import "./util/responsive";
+
+// import pages section
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/pkg-list";
+@import "./pages/pkg-detail";
+@import "./pages/dest-list";
+@import "./pages/blog-list";
+@import "./pages/blog";
+@import "./pages/dest-detail";
+@import "./pages/mice-list";
+@import "./pages/product-detail";
+
+//import components 
+@import "./components/buttons";
+@import "./components/nav";
+
+// import utilities
+@import "./util/variables";
+@import "./util/responsive";
+@import "./util/mixins";
+
+
+/*------------------------------------*\
+    Body Style
+\*------------------------------------*/
+
+body {
+    font-family: $font--primary;
+    font-weight: 400;
+    color: $font-color--primary;
+}

@@ -1,0 +1,532 @@
+// import utilities
+@import "../util/variables";
+
+/*------------------------------------*\
+    Mobile responsive 
+\*------------------------------------*/
+
+@media only screen and (max-width:450px) {
+
+    /* Global responsive */
+
+    .navbar {
+        max-height: 50px;
+        padding: 0px 15px !important;
+        background-color: #ffffff;
+
+        img {
+            width: 45px;
+        }
+
+        .navbar-toggler {
+            font-size: 1rem;
+            padding: .30rem;
+            background-color: $color--primary;
+        }
+    }
+
+
+    /* Home responsive */
+
+    .c-home-slider {
+        // padding-top: 50px;
+
+        .carousel-inner {
+            clip-path: none !important;
+        }
+
+        .carousel-indicators {
+            bottom: 0;
+        }
+    }
+
+
+    .c-service {
+        z-index: 0 !important;
+        height: unset !important;
+        margin: 0 !important;
+        position: unset !important;
+        padding-top: 50px !important;
+
+        .o-title {
+            padding-bottom: 25px !important;
+            font-weight: bold;
+            font-size: 20px !important;
+            letter-spacing: 2px;
+        }
+
+        .c-card {
+            margin-bottom: 25px;
+            filter: drop-shadow(0 20px 20px rgba(0, 0, 0, .2)) !important;
+
+            .card-title {
+                margin: 5px !important;
+            }
+        }
+    }
+
+    .c-tour-pkg {
+        h2 {
+            font-size: 25px !important;
+        }
+    }
+
+    .c-about {
+        .c-img {
+            .img-top {
+                left: 0 !important;
+            }
+        }
+    }
+
+    .c-destination {
+        &:before {
+            background: none !important;
+        }
+
+        .c-content {
+            background-color: $color--primary !important;
+            padding: 20px !important;
+
+            h2 {
+                font-size: 25px !important;
+            }
+
+            p {
+                font-size: 15px !important;
+            }
+
+            a {
+                margin-bottom: 20px;
+                min-width: 100%;
+            }
+
+            .c-card-destination {
+                p {
+                    font-size: 12px !important;
+                }
+            }
+
+            .card-img {
+                &-overlay {
+                    padding: 20px !important;
+                }
+            }
+        }
+    }
+
+    .c-mice-pkg {
+        h2 {
+            font-size: 25px !important;
+        }
+
+    }
+
+    .c-recent-works {
+        .c-wording {
+            padding: 25px !important;
+        }
+
+        p {
+            font-size: 12px !important;
+        }
+    }
+
+    .c-about {
+        .c-img {
+            padding: 0 !important;
+
+            .img-top {
+                margin-top: -20px !important;
+                max-width: unset !important;
+            }
+        }
+
+        .c-wording {
+            padding: 20px !important;
+            margin-bottom: 0px !important;
+        }
+
+        h1 {
+            font-size: 20px !important;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        p {
+            font-size: 12px !important;
+            line-height: 20px !important;
+            opacity: 0.9 !important;
+        }
+    }
+
+    .c-cta {
+        display: none !important;
+    }
+
+    .c-footer {
+        display: none !important;
+    }
+
+    /* About us responsive */
+
+    .c-header-about {
+        height: unset !important;
+    }
+
+    .c-header--left {
+        height: 200px;
+
+        &:before {
+            min-width: 0px;
+            background: unset !important;
+        }
+    }
+
+    .c-header--right {
+        left: 0;
+        padding-top: 20px;
+
+        .btn {
+            min-width: 100%;
+        }
+    }
+
+    .c-partner-about {
+        img {
+            margin-top: 10px;
+        }
+    }
+
+    .c-service-about {
+        .o-service-icon {
+            margin: auto;
+        }
+
+        .media-body {
+            padding: 20px 0px;
+            text-align: center;
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .c-travel-about {
+        .my-auto {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .btn {
+            min-width: 100% !important;
+        }
+    }
+
+    .c-travel-categories {
+        h2 {
+            font-size: 20px;
+        }
+
+        .btn {
+            min-width: 100% !important;
+        }
+    }
+
+    .c-mice-about {
+        .my-auto {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .btn {
+            min-width: 100% !important;
+        }
+    }
+
+    .c-event-service {
+        padding: 20px;
+
+        .row {
+            height: unset !important;
+        }
+
+        .c-description {
+            text-align: center;
+        }
+
+    }
+
+    .c-our-team {
+        .c-description {
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+    }
+
+    .c-product-carousel {
+        .swiper-slide {
+            .col {
+                padding: 0px !important;
+            }
+        }
+    }
+
+    .c-cta-about {
+        min-height: unset !important;
+
+        .c-content {
+            padding-top: unset;
+            min-height: 300px !important;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card {
+            min-height: 250px !important;
+            min-width: 80%;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 10px 10px 0 rgba(83, 83, 83, 0.27);
+            background-color: $color--primary;
+            color: $font-color--secondary;
+
+            &-body {
+                padding: 10px;
+            }
+        }
+
+        h6 {
+            font-size: 20px;
+            letter-spacing: 0px;
+            font-weight: 500;
+            max-width: unset;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        a {
+            min-width: 100%;
+        }
+    }
+
+    /* Package list responsive */
+    .c-pkg-list {
+
+        &-header {
+
+            .card {
+                max-width: unset;
+            }
+
+            .form-control {
+                max-width: unset;
+                margin-bottom: 20px;
+                min-width: 90%;
+            }
+
+            .btn {
+                min-width: 80%;
+            }
+
+        }
+
+        &-categories-content {
+            margin-top: 200px;
+        }
+
+    }
+
+    /* Destination list responsive */
+    .c-dest-list-product {
+        .card-text {
+            font-size: 12px;
+        }
+    }
+
+    /* Blog list responsive */
+    .c-blog-list-header {
+        p {
+            display: none;
+        }
+    }
+
+    .jumbotron {
+        height: 30% !important;
+    }
+
+    .c-blog-list-header-image {
+        display: none;
+    }
+
+    /* Product detail responsive */
+    .c-product-detail {
+
+        &-gallery {
+            max-height: 200px;
+        }
+
+        &-thumb {
+            display: none;
+        }
+
+        &-kanan {
+            h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .nav-item {
+                margin-left: 0px;
+            }
+
+            .nav-pills {
+                margin-left: 15px;
+            }
+        }
+
+        &-about {
+            margin-top: unset !important;
+        }
+
+    }
+
+    .c-mice-recomendation {
+        margin-top: 20px;
+        height: unset;
+
+        .wording {
+            padding: 20px 10px 0px;
+
+            h2 {
+                font-size: 20px;
+                text-align: center;
+
+            }
+        }
+    }
+
+}
+
+
+/*------------------------------------*\
+    Tablet responsive 
+\*------------------------------------*/
+
+@media only screen and (max-width:770px) {
+
+    /* Global responsive */
+    .navbar {
+        // max-height: 50px;
+        padding: 0px 15px !important;
+        background-color: #ffffff;
+
+        .navbar-toggler {
+            font-size: 1rem;
+            padding: .30rem;
+            background-color: $color--primary;
+        }
+    }
+
+    .carousel {
+        &-control-prev {
+            display: none !important;
+        }
+
+        &-control-next {
+            display: none !important;
+        }
+    }
+
+    /* Home responsive */
+
+    .c-service {
+        h3 {
+            padding-bottom: 25px !important;
+        }
+
+        p {
+            font-size: 12px !important;
+            word-break: break-all;
+        }
+
+        .card-body {
+            padding: 15px !important;
+        }
+    }
+
+    .c-tour-pkg {
+        .c-description {
+            padding: 25px !important;
+        }
+    }
+
+    .c-destination {
+        &:before {
+            right: -50 !important;
+        }
+
+        .c-content {
+            background-color: $color--primary !important;
+            padding: 25px !important;
+        }
+
+        .c-description {
+            a {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .c-mice-pkg {
+
+
+
+        .c-description {
+            padding: 25px !important;
+        }
+    }
+
+    .c-about {
+        .c-wording {
+            padding: 50px !important;
+            margin-bottom: 0px !important;
+
+            .c-content {
+                max-width: unset !important;
+            }
+        }
+    }
+
+    .c-cta {
+        display: none !important;
+    }
+
+    .c-footer {
+        display: none !important;
+    }
+
+}
+
+/*------------------------------------*\
+    XL responsive 
+\*------------------------------------*/
+
+@media only screen and (min-width: 1400px) {
+
+    /* About us responsive */
+
+    .c-header--left {
+        height: unset;
+
+        &:before {
+            min-width: 900px;
+        }
+    }
+}

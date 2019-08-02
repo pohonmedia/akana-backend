@@ -4,10 +4,10 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'kapalsu_surabaya';
-$db['default']['password'] = 'Merdeka1945!';
-$db['default']['database'] = 'kapalsu_kapaldb';
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '!Q2w3e4r5t6y';
+$db['default']['database'] = 'webdb_akana';
+$db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;

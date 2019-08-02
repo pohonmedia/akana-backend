@@ -31,9 +31,9 @@
         </div>
         <?php echo form_close(); ?>
         <div class="social-auth-links text-center">
-            <small><b>PM</b>CMS <span class="label label-danger">beta</span> v 0.9.101217</small>
+            <small><b>PM</b>CMS <span class="label label-danger">beta</span> v 0.9.8</small>
 
-            <p>&copy; 2015 <a href="<?php echo base_url(); ?>"><?php echo $this->config->item('website_name'); ?></a></p>
+            <p>&copy; <?php echo mdate("%Y", now())?> <a href="<?php echo base_url(); ?>"><?php echo $this->config->item('website_name'); ?></a></p>
         </div>
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->

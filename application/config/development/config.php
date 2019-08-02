@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://' . $_SERVER['HTTP_HOST'] . '/webfbp/';
+$config['base_url']	= 'http://' . $_SERVER['HTTP_HOST'] . '/webakana/';
 
 /*
 |--------------------------------------------------------------------------
@@ -244,12 +244,12 @@ $config['encryption_key'] = 'A649ms9n60vb7sgRmb29XH95QLSGs65g';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'kapal_surabaya_session';
+$config['sess_cookie_name']		= 'akanatravel_session';
 $config['sess_expiration']		= 7200;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= FALSE;
 $config['sess_use_database']	= FALSE;
-$config['sess_table_name']		= 'app_ci_sessions';
+$config['sess_table_name']		= 'akanatravel_session';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
 $config['sess_time_to_update']	= 300;
