@@ -109,8 +109,8 @@ class MY_Controller extends MX_Controller {
 
         $theme_name = $this->template->get_theme();
 
-        $url = 'assets/' . $theme_name;
-        $url_admin = 'assets/' . $theme_name;
+        $url = 'themes/' . $theme_name . '/assets';
+        $url_admin = 'themes/' . $theme_name . '/assets';
 
         $dataX['theme_assets'] = base_url($url) . '/';
         $dataX['admin_assets'] = base_url($url_admin) . '/';
