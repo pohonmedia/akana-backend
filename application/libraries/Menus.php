@@ -101,6 +101,10 @@ class Menus {
             $output .= $this->t_item_close;
         }
 
+        $output .= '<form class="form-inline my-2 my-lg-0">';
+        $output .= '<button class="btn btn-outline-success my-2 my-sm-0 btn--primary" id="contact">Contact Us</button>';
+        $output .= '</form>';
+
         return $output . $this->t_tag_close . $this->t_menu_close . PHP_EOL;
     }
 
@@ -151,8 +155,9 @@ class Menus {
                 $output .= $this->t_item_open_start;
             }
             $output .= $this->t_item_open_end;
-            $output .= '<a href="' . base_url($data->menu_url) . '">' . $data->menu_name . '</a>';
+            $output .= '<a class="nav-link" href="' . base_url($data->menu_url) . '">' . $data->menu_name . '</a>';
             $output .= $this->t_item_close;
+
         }
         return $output;
     }
