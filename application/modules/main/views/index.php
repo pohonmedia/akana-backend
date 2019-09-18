@@ -1,4 +1,5 @@
 <!-- type of service start here -->
+<!-- <div class="container-fluid c-service-home" style="background: #FF0000;"> -->
 <div class="container-fluid c-service-home">
 
 		<!-- row content start here -->
@@ -10,24 +11,24 @@
 				</h3>
 			</div>
 			<!-- title end here -->
-			<!-- card #1 start here -->
+			<!-- card Looping start here -->
 			<?php
-					foreach ($Ourservice as $key => $value) {
-						echo 'Service';
+					foreach ($ourservice as $key => $value) {
+						echo '<div class="col-lg-4 col-md-4 d-flex justify-content-center text-center">';
+						echo '<div class="card c-card">';
+						echo '<div class="card c-card">';
+						echo '<div class="card-body">';
+						echo '<i class="fas fa-suitcase"></i>';
+						echo '<h5 class="card-title">' . $value->art_title. '</h5>';
+						echo '<p class="card-text">';
+						echo $value->art_content;
+						echo '<a href="' . $value->art_slug. '" class="btn btn-link stretched-link">lihat detail</a>';
+						echo '</div>';
+						echo '</div>';
+						echo '</div>';
 					}
 			?>
-			<!-- <div class="col-lg-4 col-md-4 d-flex justify-content-center text-center">
-				<div class="card c-card">
-					<div class="card-body">
-						<i class="fas fa-suitcase"></i>
-						<h5 class="card-title">our services #1</h5>
-						<p class="card-text">
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea</p>
-						<a href="#" class="btn btn-link stretched-link">lihat detail</a>
-					</div>
-				</div>
-			</div> -->
-			<!-- card #1 end here -->
+			<!-- card end end here -->
 		</div>
 		<!-- row content end here -->
 
@@ -63,7 +64,7 @@
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					<?php
-							foreach ($Tourpackages as $key => $value) {
+							foreach ($tourpackages as $key => $value) {
 								echo 'Tour Packages';
 							}
 					?>
@@ -71,7 +72,7 @@
 					<!-- <div class="swiper-slide">
 						<div class="col">
 							<div class="card c-card-product">
-								<img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
+								<img src="<?php //echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
 								<div class="card-body">
 									<h5 class="card-title">
 										Borobudur trip 1
@@ -114,12 +115,16 @@
 			<!-- destination card start here -->
 			<div class="col-lg-8 order-2 order-lg-1">
 				<div class="row">
-
+					<?php
+							foreach ($ourdestination as $key => $value) {
+								echo 'Our Destinations';
+							}
+					?>
 					<!-- card #1 start here -->
-					<div class="col-lg-6 col-md-6">
+					<!-- <div class="col-lg-6 col-md-6"> -->
 						<!-- card content #1 start here -->
-						<div class="card text-white c-card-destination">
-							<img src="<?php echo $theme_assets . 'img/dest--1.jpg'; ?>" class="card-img img-fluid" alt="background-image">
+						<!-- <div class="card text-white c-card-destination">
+							<img src="<?php // echo $theme_assets . 'img/dest--1.jpg'; ?>" class="card-img img-fluid" alt="background-image">
 							<div class="overlay"></div>
 							<div class="card-img-overlay">
 								<h5 class="card-title">surakarta</h5>
@@ -127,100 +132,11 @@
 									20 Tour Packages at this destination</p>
 								<a href="/destination-detail.html" class="btn btn-link stretched-link">lihat detail</a>
 							</div>
-						</div>
+						</div> -->
 						<!-- card content #1 end here -->
-					</div>
+					<!-- </div> -->
 					<!-- card #1 end here -->
 
-					<!-- card #2 start here -->
-					<div class="col-lg-6 col-md-6">
-						<!-- card content #2 start here -->
-						<div class="card text-white c-card-destination">
-							<img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img img-fluid" alt="background-image">
-							<div class="overlay"></div>
-							<div class="card-img-overlay">
-								<h5 class="card-title">bali</h5>
-								<p class="card-text">
-									50 Tour Packages at this destination
-								</p>
-								<a href="/destination-detail.html" class="btn btn-link stretched-link">lihat detail</a>
-							</div>
-						</div>
-						<!-- card content #2 end here -->
-					</div>
-					<!-- card #2 end here -->
-
-					<!-- card #3 start here -->
-					<div class="col-lg-6 col-md-6">
-						<!-- card content #3 start here -->
-						<div class="card text-white c-card-destination">
-							<img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img img-fluid" alt="background-image">
-							<div class="overlay"></div>
-							<div class="card-img-overlay">
-								<h5 class="card-title">bali</h5>
-								<p class="card-text">
-									20 Tour Packages at this destination
-								</p>
-								<a href="/destination-detail.html" class="btn btn-link stretched-link">lihat detail</a>
-							</div>
-						</div>
-						<!-- card content #3 end here -->
-					</div>
-					<!-- card #3 end here -->
-
-					<!-- card #4 start here -->
-					<div class="col-lg-6 col-md-6">
-						<!-- card content #4 start here -->
-						<div class="card text-white c-card-destination">
-							<img src="<?php echo $theme_assets . 'img/dest--1.jpg'; ?>" class="card-img img-fluid" alt="background-image">
-							<div class="overlay"></div>
-							<div class="card-img-overlay">
-								<h5 class="card-title">surakarta</h5>
-								<p class="card-text">
-									5 Tour Packages at this destination
-								</p>
-								<a href="/destination-detail.html" class="btn btn-link stretched-link">lihat detail</a>
-							</div>
-						</div>
-						<!-- card content #4 end here -->
-					</div>
-					<!-- card #4 end here -->
-
-					<!-- card #5 start here -->
-					<div class="col-lg-6 col-md-6">
-						<!-- card content #5 start here -->
-						<div class="card text-white c-card-destination">
-							<img src="<?php echo $theme_assets . 'img/dest--1.jpg'; ?>" class="card-img img-fluid" alt="background-image">
-							<div class="overlay"></div>
-							<div class="card-img-overlay">
-								<h5 class="card-title">surakarta</h5>
-								<p class="card-text">
-									5 Tour Packages at this destination
-								</p>
-								<a href="/destination-detail.html" class="btn btn-link stretched-link">lihat detail</a>
-							</div>
-						</div>
-						<!-- card content #5 end here -->
-					</div>
-					<!-- card #5 end here -->
-
-					<!-- card #6 start here -->
-					<div class="col-lg-6 col-md-6">
-						<!-- card content #6 start here -->
-						<div class="card text-white c-card-destination">
-							<img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img img-fluid" alt="background-image">
-							<div class="overlay"></div>
-							<div class="card-img-overlay">
-								<h5 class="card-title">bali</h5>
-								<p class="card-text">
-									20 Tour Packages at this destination
-								</p>
-								<a href="/destination-detail.html" class="btn btn-link stretched-link">lihat detail</a>
-							</div>
-						</div>
-						<!-- card content #6 end here -->
-					</div>
-					<!-- card #6 end here -->
 
 				</div>
 			</div>
@@ -265,13 +181,17 @@
 			<div class="c-product-carousel swiper-container">
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
-
+					<?php
+							foreach ($micepakcages as $key => $value) {
+								echo 'Mice Pacakges';
+							}
+					?>
 					<!-- Slides -->
-					<div class="swiper-slide">
+					<!-- <div class="swiper-slide"> -->
 						<!--carousel card #1 start here-->
-						<div class="col">
+						<!-- <div class="col">
 							<div class="card c-card-img">
-								<img src="<?php echo $theme_assets . 'img/bg--6.jpg'; ?>" class="card-img-top" alt="card image" style="z-index:0;">
+								<img src="<?php //echo $theme_assets . 'img/bg--6.jpg'; ?>" class="card-img-top" alt="card image" style="z-index:0;">
 								<span class="o-title">
 									Event Name #1
 								</span>
@@ -279,69 +199,9 @@
 									packages detail
 								</a>
 							</div>
-						</div>
+						</div> -->
 						<!-- carousel card #1 end here-->
-					</div>
-					<div class="swiper-slide">
-						<!--carousel card #1 start here-->
-						<div class="col">
-							<div class="card c-card-img">
-								<img src="<?php echo $theme_assets . 'img/bg--7.jpg'; ?>" class="card-img-top" alt="card image" style="z-index:0;">
-								<span class="o-title">
-									Event Name #2
-								</span>
-								<a href="/product-detail.html" class="btn btn-primary btn-block btn--primary">
-									packages detail
-								</a>
-							</div>
-						</div>
-						<!-- carousel card #1 end here-->
-					</div>
-					<div class="swiper-slide">
-						<!--carousel card #1 start here-->
-						<div class="col">
-							<div class="card c-card-img">
-								<img src="<?php echo $theme_assets . 'img/bg--8.jpg'; ?>" class="card-img-top" alt="card image" style="z-index:0;">
-								<span class="o-title">
-									Event Name #3
-								</span>
-								<a href="/product-detail.html" class="btn btn-primary btn-block btn--primary">
-									packages detail
-								</a>
-							</div>
-						</div>
-						<!-- carousel card #1 end here-->
-					</div>
-					<div class="swiper-slide">
-						<!--carousel card #1 start here-->
-						<div class="col">
-							<div class="card c-card-img">
-								<img src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/2018/01/15155312/iStock-667709450.jpg" class="card-img-top" alt="card image" style="z-index:0;">
-								<span class="o-title">
-									Event Name #4
-								</span>
-								<a href="/product-detail.html" class="btn btn-primary btn-block btn--primary">
-									packages detail
-								</a>
-							</div>
-						</div>
-						<!-- carousel card #1 end here-->
-					</div>
-					<div class="swiper-slide">
-						<!--carousel card #1 start here-->
-						<div class="col">
-							<div class="card c-card-img">
-								<img src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/2018/01/15155312/iStock-667709450.jpg" class="card-img-top" alt="card image" style="z-index:0;">
-								<span class="o-title">
-									Event Name #5
-								</span>
-								<a href="/product-detail.html" class="btn btn-primary btn-block btn--primary">
-									packages detail
-								</a>
-							</div>
-						</div>
-						<!-- carousel card #1 end here-->
-					</div>
+					<!-- </div> -->
 				</div>
 			</div>
 			<!-- Carousel end here -->
@@ -370,10 +230,15 @@
 	<!-- Recent work wording end here -->
 	<div class="col-lg-8">
 		<div class="row no-gutters">
+			<?php
+				foreach ($recentworks as $key => $value) {
+					echo 'Mice Pacakges';
+				}
+			?>
 			<!-- Recent work content start here -->
-			<div class="col-lg-4 c-img">
+			<!-- <div class="col-lg-4 c-img">
 				<div class="card text-white">
-					<img src="<?php echo $theme_assets . 'img/bg--6.jpg'; ?>" class="card-img" alt="recent works image">
+					<img src="<?php // echo $theme_assets . 'img/bg--6.jpg'; ?>" class="card-img" alt="recent works image">
 					<div class="overlay card-img-overlay text-left">
 						<div class="c-content">
 							<h5 class="card-title">Event Name #1</h5>
@@ -381,34 +246,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- Recent work content end here -->
-			<!-- Recent work content start here -->
-			<div class="col-lg-4 c-img">
-				<div class="card text-white">
-					<img src="<?php echo $theme_assets . 'img/bg--7.jpg'; ?>" class="card-img" alt="recent works image">
-					<div class="card-img-overlay text-left">
-						<div class="c-content">
-							<h5 class="card-title">Event Name #2</h5>
-							<a href="#" class="btn btn-link stretched-link">lihat detail</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Recent work content end here -->
-			<!-- Recent work content start here -->
-			<div class="col-lg-4 c-img">
-				<div class="card text-white">
-					<img src="<?php echo $theme_assets . 'img/bg--8.jpg'; ?>" class="card-img" alt="recent works image">
-					<div class="card-img-overlay text-left">
-						<div class="c-content">
-							<h5 class="card-title">Event Name #3</h5>
-							<a href="#" class="btn btn-link stretched-link">lihat detail</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Recent work content end here -->
+			
 		</div>
 	</div>
 </div>

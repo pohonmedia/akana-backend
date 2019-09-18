@@ -110,7 +110,7 @@
                         echo '<div class="carousel-caption d-none d-md-block">';
                         echo '<h5>' . $value->sld_title . '</h5>';
                         echo '<p>' . $value->sld_text1 . '</p>';
-                        echo '<a href="#" class="btn btn-outline-success my-2 my-sm-0 btn--primary" style="letter-spacing:2px;">See More</a>';
+                        echo '<a href="' . $value->sld_link . '" class="btn btn-outline-success my-2 my-sm-0 btn--primary" style="letter-spacing:2px;">' . $value->sld_linktext . '</a>';
                         echo '</div>';
                         echo '</div>';
                     }
