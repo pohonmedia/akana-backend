@@ -113,16 +113,14 @@ class Admin extends Admin_Controller {
             'name' => 'img_section1',
             'type' => 'file'
         );
-
         $this->data['desc_section1'] = array(
             'name' => 'desc_section1',
-            'id' => 'desc_area',
+            'id' => 'desc_area1',
             'type' => 'text',
             'placeholder' => 'Content',
             'class' => 'form-control',
             'value' => $this->form_validation->set_value('desc_section1'),
         );
-
         $this->data['link_section1'] = array(
             'name' => 'link_section1',
             'type' => 'text',
@@ -130,6 +128,90 @@ class Admin extends Admin_Controller {
             'class' => 'form-control',
             'required' => '',
             'value' => $this->form_validation->set_value('link_section1'),
+        );
+
+        $this->data['img_section2'] = array(
+            'name' => 'img_section2',
+            'type' => 'file'
+        );
+        $this->data['desc_section2'] = array(
+            'name' => 'desc_section2',
+            'id' => 'desc_area2',
+            'type' => 'text',
+            'placeholder' => 'Content',
+            'class' => 'form-control',
+            'value' => $this->form_validation->set_value('desc_section2'),
+        );
+        $this->data['link_section2'] = array(
+            'name' => 'link_section2',
+            'type' => 'text',
+            'placeholder' => 'Link Section 2',
+            'class' => 'form-control',
+            'required' => '',
+            'value' => $this->form_validation->set_value('link_section2'),
+        );
+
+        $this->data['img_section3'] = array(
+            'name' => 'img_section3',
+            'type' => 'file'
+        );
+        $this->data['desc_section3'] = array(
+            'name' => 'desc_section3',
+            'id' => 'desc_area3',
+            'type' => 'text',
+            'placeholder' => 'Content',
+            'class' => 'form-control',
+            'value' => $this->form_validation->set_value('desc_section3'),
+        );
+        $this->data['link_section3'] = array(
+            'name' => 'link_section3',
+            'type' => 'text',
+            'placeholder' => 'Link Section 3',
+            'class' => 'form-control',
+            'required' => '',
+            'value' => $this->form_validation->set_value('link_section3'),
+        );
+
+        $this->data['img_section4'] = array(
+            'name' => 'img_section4',
+            'type' => 'file'
+        );
+        $this->data['desc_section4'] = array(
+            'name' => 'desc_section4',
+            'id' => 'desc_area4',
+            'type' => 'text',
+            'placeholder' => 'Content',
+            'class' => 'form-control',
+            'value' => $this->form_validation->set_value('desc_section4'),
+        );
+        $this->data['link_section4'] = array(
+            'name' => 'link_section4',
+            'type' => 'text',
+            'placeholder' => 'Link Section 4',
+            'class' => 'form-control',
+            'required' => '',
+            'value' => $this->form_validation->set_value('link_section4'),
+        );
+
+        $this->data['img_section5'] = array(
+            'name' => 'img_section5',
+            'type' => 'file'
+        );
+        $this->data['desc_section5'] = array(
+            'name' => 'desc_section5',
+            'id' => 'desc_area5',
+            'type' => 'text',
+            'placeholder' => 'Content',
+            'class' => 'form-control',
+            'value' => $this->form_validation->set_value('desc_section5'),
+        );
+        $this->data['link_section5'] = array(
+            'name' => 'link_section5',
+            'type' => 'text',
+            'placeholder' => 'Link Section 5',
+            'class' => 'form-control',
+            'required' => '',
+            'value' => $this->form_validation->set_value('link_section5'),
         );
 
         $this->template->build('admin/add', $this->data);

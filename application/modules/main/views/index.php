@@ -13,6 +13,7 @@
 			<!-- title end here -->
 			<!-- card Looping start here -->
 			<?php
+				if(isset($ourservice) && $ourservice != null) {
 					foreach ($ourservice as $key => $value) {
 						echo '<div class="col-lg-4 col-md-4 d-flex justify-content-center text-center">';
 						echo '<div class="card c-card">';
@@ -27,6 +28,7 @@
 						echo '</div>';
 						echo '</div>';
 					}
+				}
 			?>
 			<!-- card end end here -->
 		</div>
@@ -64,9 +66,11 @@
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					<?php
+						if(isset($tourpackages) && $tourpackages != null) {
 							foreach ($tourpackages as $key => $value) {
 								echo 'Tour Packages';
 							}
+						}
 					?>
 					<!-- Slides -->
 					<!-- <div class="swiper-slide">
@@ -116,9 +120,11 @@
 			<div class="col-lg-8 order-2 order-lg-1">
 				<div class="row">
 					<?php
+						if(isset($ourdestination) && $ourdestination != null) {
 							foreach ($ourdestination as $key => $value) {
 								echo 'Our Destinations';
 							}
+						}
 					?>
 					<!-- card #1 start here -->
 					<!-- <div class="col-lg-6 col-md-6"> -->
@@ -182,9 +188,11 @@
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					<?php
+						if(isset($micepakcages) && $micepakcages != null) {
 							foreach ($micepakcages as $key => $value) {
 								echo 'Mice Pacakges';
 							}
+						}
 					?>
 					<!-- Slides -->
 					<!-- <div class="swiper-slide"> -->
@@ -231,8 +239,10 @@
 	<div class="col-lg-8">
 		<div class="row no-gutters">
 			<?php
-				foreach ($recentworks as $key => $value) {
-					echo 'Mice Pacakges';
+				if(isset($recentworks) && $recentworks != null) {
+					foreach ($recentworks as $key => $value) {
+						echo 'Mice Pacakges';
+					}
 				}
 			?>
 			<!-- Recent work content start here -->
