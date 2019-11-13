@@ -181,6 +181,8 @@ class Admin extends Admin_Controller {
             'name' => 'product_img',
             'type' => 'file'
         );
+        // Create Product Type
+        $this
 
         $this->data['prod_tags'] = array(
             'name' => 'prod_tags',
