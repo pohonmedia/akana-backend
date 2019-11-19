@@ -214,7 +214,7 @@ class Admin extends Admin_Controller {
             'value' => $this->form_validation->set_value('link_section5'),
         );
 
-        $this->template->build('admin/add', $this->data);
+        $this->template->build('admin/homepage', $this->data);
     }
 
     public function rm_image($id) {

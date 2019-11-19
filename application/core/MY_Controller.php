@@ -75,9 +75,9 @@ class MY_Controller extends MX_Controller {
             $type = 'info';
         }
 
-        $alert .= '<div class="alert alert-' . $type . ' alert-dismissable">';
+        $alert .= '<div class="alert alert-' . $type . ' alert-dismissable show fade"><div class="alert-body"><button class="close" data-dismiss="alert"><span>&times;</span></button>';
         $alert .= $msg;
-        $alert .= '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>';
+        $alert .= '</div></div>';
 
         return $alert;
     }
@@ -141,7 +141,7 @@ class Admin_Controller extends My_Controller {
         $this->template->set_theme($this->config->item('admin_theme_name'));
         $this->set_url_assets();
 
-        $this->data['body_class'] = ' class="hold-transition skin-red sidebar-mini"';
+        // $this->data['body_class'] = ' class="hold-transition skin-red sidebar-mini"';
         $this->data['menu_list'] = $this->admin_m->navigation_list();
 
         $this->template->set_partial('header', 'header', $this->data);

@@ -1,16 +1,15 @@
-<!-- Toolbars -->
-<section class="content-header">
-    <a class="btn btn-sm btn-default btn-flat" href="<?php echo base_url('admin/pages'); ?>"><i class="fa fa-list"></i>&nbsp;&nbsp;Pages&nbsp;&nbsp;&nbsp;<span class="label label-success"><?php echo $count_data; ?></span></a>
-</section>
-
+<h2 class="section-title">Edit Selected Page</h2>
+<div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+        <a class="btn btn-sm btn-info" style="margin-right: 5px;" href="<?php echo base_url('admin/pages'); ?>"><i class="fa fa-list"></i>&nbsp;&nbsp;All Pages&nbsp;&nbsp;&nbsp;<span class="badge badge-primary"><?php echo $count_data; ?></span></a>
+    </div>
+</div>
+</br>
 <!-- Main content -->
-<section class="content">
-    <!-- Default box -->
-    <div class="box box-warning">
-        <div class="box-header with-border">
-            <h3 class="box-title">Edit Selected Page</h3>
-        </div>
-        <div class="box-body">
+<div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+        <div class="card">
+            <div class="card-body">
             <?php
             if (!empty($msg)) {
                 echo $msg;
@@ -43,13 +42,12 @@
                     </div>
                 </div>
             </div>
-        </div><!-- /.box-body -->
-        <div class="box-footer">
-            <div class="box-tools">
-                <button type="submit" class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Update</button>
-                <a class="btn btn-sm btn-flat btn-warning" style="margin-left: 5px;" href="<?php echo base_url('admin/pages'); ?>"><i class="fa fa-rotate-left"></i> Batal</a>
-            </div>
-        </div> <!--/.box-footer-->
+            </div><!-- /.box-body -->
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update</button>
+                <a class="btn btn-warning" style="margin-left: 5px;" href="<?php echo base_url('admin/pages'); ?>"><i class="fa fa-undo"></i> Batal</a>
+            </div> <!--/.box-footer-->
         <?php echo form_close(); ?>
+        </div><!-- /.box -->
     </div><!-- /.box -->
 </section><!-- /.content -->

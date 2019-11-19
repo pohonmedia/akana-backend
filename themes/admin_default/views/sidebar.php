@@ -1,20 +1,16 @@
-<!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search...">
-                <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
-        </form>
+<div class="main-sidebar">
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <a href="<?php echo site_url() ?>"><?php echo $this->config->item('website_name');?></a>
+        </div>
+        <div class="sidebar-brand sidebar-brand-sm">
+            <a href="<?php echo site_url() ?>"><?php echo $this->config->item('website_shortname');?></a>
+        </div>
+        <ul class="sidebar-menu">
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="header">GENERAL</li>
+            <li class="menu-header">GENERAL</li>
                 <?php
                 foreach ($menu_list as $key => $value) {
                     $active = "";
@@ -22,19 +18,18 @@
                         $active = 'active';
                     }
                     $tree_view = "";
+                    $has_dropdown = "";
                     if ($value['is_header']) {
-                        $tree_view = ' treeview';
+                        $tree_view = ' dropdown';
+                        $has_dropdown = ' has-dropdown';
                     }
                     echo '<li class="' . $active . $tree_view . '" id="' . $value['ids'] . '">';
-                    echo '<a href="' . base_url($value['url']) . '">';
+                    echo '<a href="' . base_url($value['url']) . '" class="nav-link' . $has_dropdown . '">';
                     echo '<i class="' . $value['icon_class'] . '"></i> ';
                     echo '<span>' . $value['name'] . '</span>';
-                    if ($value['is_header']) {
-                        echo ' <i class="fa fa-angle-left pull-right"></i>';
-                    }
                     echo '</a>';
                     if ($value['is_header']) {
-                        echo '<ul class="treeview-menu">';
+                        echo '<ul class="dropdown-menu">';
                         if(!isset($subnav_active)) {
                             $subnav_active = '';
                         }
@@ -44,7 +39,7 @@
                                 if ($v->menu_id == $subnav_active) {
                                     $sub_active = 'active';
                                 }
-                                echo '<li class="' . $sub_active .  '" id="' . $v->menu_id . '"><a href="' . base_url($v->menu_link) . '"><i class="fa fa-circle-o"></i> ' . $v->menu_name . '</a></li>';
+                                echo '<li class="' . $sub_active .  '" id="' . $v->menu_id . '"><a class="nav-link" href="' . base_url($v->menu_link) . '">' . $v->menu_name . '</a></li>';
                             }
                         }
                         echo '</ul>';
@@ -53,6 +48,5 @@
                 }
                 ?>
         </ul>
-    </section>
-    <!-- /.sidebar -->
-</aside>
+    </aside>
+</div>

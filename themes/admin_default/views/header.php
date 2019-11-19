@@ -1,35 +1,31 @@
-<header class="main-header">
-    <!-- Logo -->
-    <a target="_blank" href="<?php echo base_url(); ?>" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>T</span>
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Akana</b>Travel</span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top" role="navigation">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-        </a>
-        <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-                <!-- User Account: style can be found in dropdown.less -->
-                <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="<?php echo $admin_assets . 'img/img.png'; ?>" class="user-image" alt="User Image">
-                        <span class="hidden-xs"><?php echo $this->ion_auth->user()->row()->first_name; ?></span>
-                    </a>
-                    <ul class="dropdown-menu" style="width: 100px;">
-                        <li class="user-footer">
-                            <a href="#" class="btn btn-default btn-flat"><i class="fa fa-user"></i> <span>Profile</span></a>
-                        </li>
-                        <li class="user-footer">
-                            <a href="<?php echo base_url('auth/logout'); ?>" class="btn btn-default btn-flat"><i class="fa fa-power-off text-red"></i> <span class="text-red">Sign Out</span></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+<div class="navbar-bg"></div>
+<nav class="navbar navbar-expand-lg main-navbar">
+    <form class="form-inline mr-auto">
+        <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+        </ul>
+    </form>
+    <ul class="navbar-nav navbar-right">
+        <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+        <img alt="image" src="<?php echo $admin_assets . 'img/avatar/avatar-1.png'; ?>" class="rounded-circle mr-1">
+        <div class="d-sm-none d-lg-inline-block">Hi, <?php echo $this->ion_auth->user()->row()->first_name; ?></div></a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <!-- <div class="dropdown-title">Logged in 5 min ago</div> -->
+            <a href="#" class="dropdown-item has-icon">
+            <i class="far fa-user"></i> Profile
+            </a>
+            <!-- <a href="features-activities.html" class="dropdown-item has-icon">
+            <i class="fas fa-bolt"></i> Activities
+            </a>
+            <a href="features-settings.html" class="dropdown-item has-icon">
+            <i class="fas fa-cog"></i> Settings
+            </a> -->
+            <!-- <div class="dropdown-divider"></div> -->
+            <a href="<?php echo base_url('auth/logout'); ?>" class="dropdown-item has-icon text-danger">
+            <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
         </div>
-    </nav>
-</header>
+        </li>
+    </ul>
+</nav>
