@@ -51,4 +51,4 @@
         <?php echo form_close(); ?>
         </div><!-- /.box -->
     </div><!-- /.box -->
-</section><!-- /.content -->
+</div><!-- /.content -->

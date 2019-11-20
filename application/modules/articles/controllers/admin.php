@@ -77,6 +77,7 @@ class Admin extends Admin_Controller {
         $total_row = $this->_db->count_all(array());
         $this->data['count_data'] = $total_row;
         $this->data['page_desc'] = 'Add New Article';
+        $this->data['back_url'] = 'admin/articles';
 
         //Validation Rules
         $this->form_validation->set_rules('art_title', 'Article Title', 'required');
@@ -214,6 +215,7 @@ class Admin extends Admin_Controller {
         $total_row = $this->_db->count_all(array());
         $this->data['count_data'] = $total_row;
         $this->data['page_desc'] = 'Edit Selected Article';
+        $this->data['back_url'] = 'admin/articles';
 
         $art_detail = $this->_db->get_detail('id', $id);
 

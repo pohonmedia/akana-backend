@@ -3,7 +3,6 @@
 <div class="row">
     <div class="col-12 col-md-12 col-lg-12">
         <a class="btn btn-sm btn-info" href="<?php echo base_url('admin/pages'); ?>"><i class="fa fa-list"></i>&nbsp;&nbsp;Pages&nbsp;&nbsp;&nbsp;<span class="badge badge-primary"><?php echo $count_data; ?></span></a>
-        &nbsp;
         <a class="btn btn-sm btn-info" href="<?php echo base_url('admin/pages/add'); ?>"><i class="fa fa-plus-square"></i>&nbsp;&nbsp;New Page</a>
     </div>
 </div>
@@ -11,7 +10,7 @@
 <div class="row">
     <div class="col-12 col-md-12 col-lg-12">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body table-responsive">
                 <?php
                 if (!empty($msg)) {
                     echo $msg;
@@ -40,9 +39,9 @@
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th class="text-center" width="70">#</th>
-                            <th width="300">Title </th>
-                            <th>Deskripsi </th>
+                            <th scope="col" class="text-center" width="70">#</th>
+                            <th scope="col" width="300">Title </th>
+                            <th scope="col">Deskripsi </th>
                         </tr>
                     </thead>
                     <tbody>

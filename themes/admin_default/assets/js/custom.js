@@ -32,11 +32,18 @@ $(document).ready(function() {
             height: 100
         });
     }
-    // Pages Add Textarea
+    // Desc Add Textarea
     if($('#desc_area').length != 0) {
         $('#desc_area').summernote({
             tabsize: 2,
             height: 300
+        });
+    }
+    // Desc Add Textarea
+    if($('#ct_desc').length != 0) {
+        $('#ct_desc').summernote({
+            tabsize: 2,
+            height: 200
         });
     }
 });

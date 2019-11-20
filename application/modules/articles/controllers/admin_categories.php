@@ -67,6 +67,7 @@ class Admin_categories extends Admin_Controller {
         $total_row = $this->_db->count_all(array());
         $this->data['count_data'] = $total_row;
         $this->data['page_desc'] = 'Add New Category';
+        $this->data['back_url'] = 'admin/articles/categories';
 
         //Validation Rules
         $this->form_validation->set_rules('ct_name', 'Nama Kategori', 'required');
@@ -101,6 +102,7 @@ class Admin_categories extends Admin_Controller {
 
         $this->data['ct_desc'] = array(
             'name' => 'ct_desc',
+            'id' => 'ct_desc',
             'type' => 'text',
             'placeholder' => 'Description',
             'class' => 'form-control',
@@ -116,6 +118,7 @@ class Admin_categories extends Admin_Controller {
         $total_row = $this->_db->count_all(array());
         $this->data['count_data'] = $total_row;
         $this->data['page_desc'] = 'Edit Selected Category';
+        $this->data['back_url'] = 'admin/articles/categories';
 
         $cat_detail = $this->_db->get_detail('id', $id);
 
@@ -153,6 +156,7 @@ class Admin_categories extends Admin_Controller {
 
         $this->data['ct_desc'] = array(
             'name' => 'ct_desc',
+            'id' => 'ct_desc',
             'type' => 'text',
             'placeholder' => 'Description',
             'class' => 'form-control',
