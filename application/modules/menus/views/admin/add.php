@@ -1,16 +1,17 @@
 <!-- Toolbars -->
-<section class="content-header">
-    <a class="btn btn-sm btn-default btn-flat" href="<?php echo base_url('admin/menus'); ?>"><i class="fa fa-list"></i>&nbsp;&nbsp;All Menus&nbsp;&nbsp;&nbsp;<span class="label label-success"><?php echo $count_data; ?></span></a>
-</section>
+<h2 class="section-title">Add New Menu</h2>
+<div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+        <a class="btn btn-sm btn-info" href="<?php echo base_url('admin/menus'); ?>"><i class="fa fa-list"></i>&nbsp;&nbsp;All Menus&nbsp;&nbsp;&nbsp;<span class="badge badge-primary"><?php echo $count_data; ?></span></a>
+    </div>
+</div>
+</br>
 
 <!-- Main content -->
-<section class="content">
-    <!-- Default box -->
-    <div class="box box-success">
-        <div class="box-header with-border">
-            <h3 class="box-title">Add New Menu</h3>
-        </div>
-        <div class="box-body">
+<div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+        <div class="card">
+            <div class="card-body">
             <?php
             if (!empty($msg)) {
                 echo $msg;
@@ -80,14 +81,15 @@
                     <?php echo form_input($menu_url); ?>
                 </div>
             </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Create</button>
-                <a class="btn btn-sm btn-flat btn-warning" style="margin-left: 5px;" href="<?php echo base_url('admin/menus'); ?>"><i class="fa fa-rotate-left"></i> Batal</a>
             </div>
-            <?php echo form_close(); ?>
-        </div><!-- /.box-body -->
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Create</button>
+                <a class="btn btn-warning" style="margin-left: 5px;" href="<?php echo base_url('admin/menus'); ?>"><i class="fa fa-undo"></i> Batal</a>
+            </div> <!--/.box-footer-->
+        <?php echo form_close(); ?>
+        </div><!-- /.box -->
     </div><!-- /.box -->
-</section><!-- /.content -->
+</div><!-- /.content -->
 
 <!-- Modal -->
 <div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

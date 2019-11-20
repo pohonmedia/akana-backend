@@ -78,7 +78,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- /.box-body -->
+            </div><!-- /.box-body -->
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Create</button>
                 <a class="btn btn-warning" style="margin-left: 5px;" href="<?php echo base_url('admin/articles'); ?>"><i class="fa fa-undo"></i> Batal</a>

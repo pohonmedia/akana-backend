@@ -1,17 +1,18 @@
 <!-- Toolbars -->
-<section class="content-header">
-    <a class="btn btn-sm btn-default btn-flat" href="<?php echo base_url('admin/menus'); ?>"><i class="fa fa-list"></i>&nbsp;&nbsp;Menus&nbsp;&nbsp;&nbsp;<span class="label label-success"><?php echo!empty($count_data) ? $count_data : 0; ?></span></a>
-    <a class="btn btn-sm btn-default btn-flat" href="<?php echo base_url('admin/menus/add'); ?>"><i class="fa fa-plus-square"></i>&nbsp;&nbsp;Create Menu</a>
-</section>
+<h2 class="section-title">List Top Menu</h2>
+<div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+        <a class="btn btn-sm btn-info" href="<?php echo base_url('admin/menus'); ?>"><i class="fa fa-list"></i>&nbsp;&nbsp;Menus&nbsp;&nbsp;&nbsp;<span class="badge badge-primary"><?php echo!empty($count_data) ? $count_data : 0; ?></span></a>
+        <a class="btn btn-sm btn-info" href="<?php echo base_url('admin/menus/add'); ?>"><i class="fa fa-plus-square"></i>&nbsp;&nbsp;Create Menu</a>
+    </div>
+</div>
+</br>
 
 <!-- Main content -->
-<section class="content">
-    <!-- Default box -->
-    <div class="box box-danger">
-        <div class="box-header with-border">
-            <h3 class="box-title">Top Menu</h3>
-        </div>
-        <div class="box-body table-responsive">
+<div class="row">
+    <div class="col-12 col-md-12 col-lg-12">
+        <div class="card">
+            <div class="card-body table-responsive">
             <?php
             if (!empty($msg)) {
                 echo $msg;
@@ -100,23 +101,25 @@
                     ?>
                 </tbody>
             </table>
-            <!--            <div class="text-center">
-            <?php
-//                    if (!empty($template['partials']['pagination'])) {
-//                        echo $template['partials']['pagination'];
-//                    }
-            ?>
-                        </div>-->
-        </div><!-- /.box-body -->
-    </div><!-- /.box --><div class="box box-danger">
+            </div>
+            <div class="card-footer text-center">
+            <?php echo $template['partials']['pagination'] ?>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <!-- <div class="box box-danger d-none">
         <div class="box-header with-border">
             <h3 class="box-title">Bottom Menu</h3>
         </div>
         <div class="box-body table-responsive">
             <?php
-            if (!empty($msg)) {
-                echo $msg;
-            }
+            // if (!empty($msg)) {
+                // echo $msg;
+            // }
             ?>
             <table class="table table-hover table-striped table-condensed">
                 <thead>
@@ -131,17 +134,12 @@
                 </thead>
                 <tbody>
                     <?php
-                    echo '<tr>';
-                    echo '<td colspan="6"><span class="text-danger">Bottom menu not enable yet.</span></td>';
-                    echo '</tr>';
+                    // echo '<tr>';
+                    // echo '<td colspan="6"><span class="text-danger">Bottom menu not enable yet.</span></td>';
+                    // echo '</tr>';
                     ?>
                 </tbody>
             </table>
-            <?php
-//                if (!empty($template['partials']['pagination'])) {
-//                    echo $template['partials']['pagination'];
-//                }
-            ?>
-        </div><!-- /.box-body -->
-    </div><!-- /.box -->
-</section><!-- /.content -->
+        </div>
+    </div>
+</section> -->
