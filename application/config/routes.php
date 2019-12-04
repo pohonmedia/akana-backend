@@ -19,6 +19,12 @@ $route['admin/catalogs/categories'] = 'catalogs/admin_categories/index';
 $route['admin/catalogs/types/(:num)'] = 'catalogs/admin_types';
 $route['admin/catalogs/types/(:any)'] = 'catalogs/admin_types/$1';
 $route['admin/catalogs/types'] = 'catalogs/admin_types/index';
+$route['admin/catalogs/destination/(:num)'] = 'catalogs/admin_destination';
+$route['admin/catalogs/destination/(:any)'] = 'catalogs/admin_destination/$1';
+$route['admin/catalogs/destination'] = 'catalogs/admin_destination/index';
+$route['admin/catalogs/mice/(:num)'] = 'catalogs/admin_mice';
+$route['admin/catalogs/mice/(:any)'] = 'catalogs/admin_mice/$1';
+$route['admin/catalogs/mice'] = 'catalogs/admin_mice/index';
 
 /*USERS GROUPS*/
 $route['admin/users/groups/(:num)'] = 'users/admin_groups';

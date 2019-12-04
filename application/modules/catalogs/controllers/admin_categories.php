@@ -18,8 +18,8 @@ class Admin_categories extends Admin_Controller {
         $this->load->model('Catalogs_categories_m');
         $this->_db = $this->Catalogs_categories_m;
         //Main Nav IDs
-        $this->data['nav_active'] = 'modules';
-        $this->data['subnav_active'] = 'catalogs';
+        $this->data['nav_active'] = 'catalogs';
+        $this->data['subnav_active'] = 'listproducts';
         $this->breadcrumbs->push('Catalogs', 'admin/catalogs');
         $this->breadcrumbs->push('Categories', 'admin/catalogs/categories');
 

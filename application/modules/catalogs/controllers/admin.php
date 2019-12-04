@@ -22,8 +22,8 @@ class Admin extends Admin_Controller {
         $this->load->model('Catalogs_types_m');
         $this->_dbtype = $this->Catalogs_types_m;
         //Main Nav IDs
-        $this->data['nav_active'] = 'modules';
-        $this->data['subnav_active'] = 'catalogs';
+        $this->data['nav_active'] = 'catalogs';
+        $this->data['subnav_active'] = 'listproducts';
         $this->breadcrumbs->push('Catalogs', 'admin/catalogs');
 
         $this->cat = $this->_dbcat->combo_box_public(null, false, false);
