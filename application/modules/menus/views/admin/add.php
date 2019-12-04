@@ -30,49 +30,43 @@
                 <label for="menu_type" class="control-label">Menu Type</label>
                 <?php echo form_dropdown('menu_type', $type_data, '0', $menu_type); ?>
             </div>
-            <div id="pages-select">
+            <div class="form-group" id="pages-select">
+                <a href="#" class="btn btn-sm btn-info" onclick="return showSelectPages()"><i class="fa fa-copy"></i> Select Pages</a>
+            </div>
+            <div id="article-select" class="d-none">
                 <div class="form-group">
-                    <a class="btn btn-sm btn-flat btn-default" onclick="return showSelectPages()"><i class="fa fa-copy"></i> Select Pages</a>
+                    <label for="article_type" class="control-label d-block">Article Type</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="article_type" value="1" checked>
+                        <label class="form-check-label">List All Article </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="article_type" value="2">
+                        <label class="form-check-label">List Article Category </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="article_type" value="3">
+                        <label class="form-check-label">List Article by Category </label>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-info" onclick="return showArticleCategory()" id="btnSelectArticleCat"><i class="fa fa-folder"></i> Select Category</a>
                 </div>
             </div>
-            <div id="article-select" class="hidden">
+            <div id="catalog-select" class="d-none">
                 <div class="form-group">
-                    <label for="article_type" class="control-label">Article Type</label>
-                    <div class="radio" id="typeArticleSelect">
-                        <label>
-                            <input type="radio" name="article_type" value="1" checked>List All Article
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label>
-                            <input type="radio" name="article_type" value="2">List Article Category
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label>
-                            <input type="radio" name="article_type" value="3">List Article by Category
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-sm btn-flat btn-default" onclick="return showArticleCategory()" id="btnSelectArticleCat"><i class="fa fa-folder"></i> Select Category</a>
+                    <label for="catalog_type" class="control-label d-block">Catalog Type</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="catalog_type" value="1" checked>
+                        <label class="form-check-label"> List All Catalog </label>
                     </div>
-                </div>
-            </div>
-            <div id="catalog-select" class="hidden">
-                <div class="form-group">
-                    <label for="catalog_type" class="control-label">Catalog Type</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="catalog_type" value="1" checked>List All Catalog
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label>
-                            <input type="radio" name="catalog_type" value="2">List Catalog Category
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label>
-                            <input type="radio" name="catalog_type" value="3">List Catalog by Category
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-sm btn-flat btn-default" onclick="return showCatalogCategory()" id="btnSelectCatalogCat"><i class="fa fa-folder"></i> Select Category</a>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="catalog_type" value="2">
+                        <label class="form-check-label"> List Catalog Category </label>
                     </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="catalog_type" value="3">
+                        <label class="form-check-label"> List Catalog by Category </label>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-info" onclick="return showCatalogCategory()" id="btnSelectCatalogCat"><i class="fa fa-folder"></i> Select Category</a>
                 </div>
             </div>
             <div id="link-select">
@@ -90,20 +84,3 @@
         </div><!-- /.box -->
     </div><!-- /.box -->
 </div><!-- /.content -->
-
-<!-- Modal -->
-<div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalTitle"></h4>
-            </div>
-            <div class="modal-body" id="modalContent">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-info btn-sm btn-simple" onclick="return closeModal()">Save</button>
-            </div>
-        </div>
-    </div>
-</div>
