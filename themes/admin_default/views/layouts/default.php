@@ -70,8 +70,31 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="<?php echo $admin_assets . 'js/summernote-bs4.min.js'; ?>"></script>
+        <script src="<?php echo $admin_assets . 'js/ckeditor/ckeditor.js'; ?>"></script>
+        <script src="<?php echo $admin_assets . 'js/ckfinder/ckfinder.js'; ?>"></script>
         <script src="<?php echo $admin_assets . 'js/stisla.js'; ?>"></script>
         <script src="<?php echo $admin_assets . 'js/scripts.js'; ?>"></script>
+        <script>
+            var BASE_URL = '<?php echo base_url(); ?>';
+        </script>
         <script src="<?php echo $admin_assets . 'js/custom.js'; ?>"></script>
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modalTitle"></h4>
+                    </div>
+                    <div class="modal-body" id="modalContent">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info btn-sm btn-simple" onclick="return closeModal()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
