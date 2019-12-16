@@ -118,10 +118,10 @@ class Catalogs_m extends CI_Model {
     }
 
     public function get_include($value) {
-        $sql = "SELECT MPi.*";
+        $sql = "SELECT MPI.*";
         $sql .= " FROM md_product_incl MPI ";
         $sql .= "WHERE intproductid = ? ";
-        $sql .= "ORDER BY MPi.id";
+        $sql .= "ORDER BY MPI.id";
 
         $query = $this->db->query($sql, array($value));
         if ($query->num_rows() == 0) {
