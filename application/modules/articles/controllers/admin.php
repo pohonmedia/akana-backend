@@ -217,7 +217,7 @@ class Admin extends Admin_Controller {
         $this->data['page_desc'] = 'Edit Selected Article';
         $this->data['back_url'] = 'admin/articles';
 
-        $art_detail = $this->_db->get_detail('id', $id);
+        $art_detail = $this->_db->get_detail('MA.id', $id);
 
         //Validation Rules
         $this->form_validation->set_rules('art_title', 'Article Title', 'required');

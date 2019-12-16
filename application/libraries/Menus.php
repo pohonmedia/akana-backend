@@ -101,9 +101,9 @@ class Menus {
             $output .= $this->t_item_close;
         }
 
-        $output .= '<form class="form-inline my-2 my-lg-0">';
-        $output .= '<button class="btn btn-outline-success my-2 my-sm-0 btn--primary" id="contact">Contact Us</button>';
-        $output .= '</form>';
+        // $output .= '<form class="form-inline my-2 my-lg-0">';
+        // $output .= '<button class="btn btn-outline-success my-2 my-sm-0 btn--primary" id="contact">Contact Us</button>';
+        // $output .= '</form>';
 
         return $output . $this->t_tag_close . $this->t_menu_close . PHP_EOL;
     }
