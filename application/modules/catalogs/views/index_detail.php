@@ -237,72 +237,22 @@
                             this tour includes
                         </h5>
                     </div>
+                    <?php
 
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    Accomodation for 3 nights at selected hotel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    Entrance fee as per itinerary
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    Well air conditioned transport by medium bus
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    English speaking tour guide
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    Entrance fee as per itinerary
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    Accomodation for 3 nights at selected hotel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        if(isset($product_include) && $product_include != null) {
+                            foreach($product_include as $key => $value) {
+                                echo '<div class="col-lg-4 mt-4 d-flex justify-content-left">';
+                                echo '<div class="media">';
+                                echo '<img src="' . base_url('themes/akana/assets/img/fireworks.svg') . '" class="mr-3 img-fluid" alt="...">';
+                                echo '<div class="media-body"><p class="mt-0">';
+                                echo $value->icl_desc;
+                                echo '</p> </div> </div> </div>';
+                            }
+                        } else {
+                                echo '<div class="col-lg-12 c-title text-center">';
+                                echo '<p>Belum ada data</p> </div>';
+                        }
+                    ?>
                     <!-- content atas end here -->
 
                     <!-- content bawah start here -->
@@ -312,71 +262,21 @@
                         </h5>
                     </div>
 
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    Flight ticket
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    airport tax
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    high season surcharge
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    tipping guide & driver
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    high season surcharge
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 d-flex justify-content-left">
-                        <div class="media">
-                            <img src="./assets/img/fireworks.svg" class="mr-3 img-fluid" alt="...">
-                            <div class="media-body">
-                                <p class="mt-0">
-                                    airport tax
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        if(isset($product_exclude) && $product_exclude != null) {
+                            foreach($product_exclude as $key => $value) {
+                                echo '<div class="col-lg-4 mt-4 d-flex justify-content-left">';
+                                echo '<div class="media">';
+                                echo '<img src="' . base_url('themes/akana/assets/img/fireworks.svg') . '" class="mr-3 img-fluid" alt="...">';
+                                echo '<div class="media-body"><p class="mt-0">';
+                                echo $value->ecl_desc;
+                                echo '</p> </div> </div> </div>';
+                            }
+                        } else {
+                                echo '<div class="col-lg-12 c-title text-center">';
+                                echo '<p>Belum ada data</p> </div>';
+                        }
+                    ?>
                     <!-- content bawah end here -->
 
                 </div>
@@ -409,7 +309,7 @@
                         <!--carousel card #1 start here-->
                         <div class="col">
                             <div class="card c-card-product">
-                                <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                                <img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Borobudur trip 1
@@ -436,7 +336,7 @@
                         <!--carousel card #1 start here-->
                         <div class="col">
                             <div class="card c-card-product">
-                                <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                                <img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Borobudur trip 2
@@ -463,7 +363,7 @@
                         <!--carousel card #1 start here-->
                         <div class="col">
                             <div class="card c-card-product">
-                                <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                                <img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Borobudur trip 3
@@ -490,7 +390,7 @@
                         <!--carousel card #1 start here-->
                         <div class="col">
                             <div class="card c-card-product">
-                                <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                                <img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Borobudur trip 4
@@ -517,7 +417,7 @@
                         <!--carousel card #1 start here-->
                         <div class="col">
                             <div class="card c-card-product">
-                                <img src="./assets/img/dest--2.jpg" class="card-img-top" alt="card image">
+                                <img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Borobudur trip 5
@@ -547,41 +447,3 @@
         </div>
     </div>
     <!-- our recomendation end here -->
-
-<?php
-
-echo '<div>';
-echo '<h1>' . $product->type_name . ' - ' . $product->prod_name . '</h1>';
-echo '</div>';
-echo '<div class="blog row">';
-echo '<div class="blog-item col-md-8">';
-if (!empty($product->img)) {
-    echo '<div class="col-md-12">';
-    foreach ($product->img as $val) {
-        echo '<img class="img-thumbnail" src="' . base_url($val->prod_img_url) . '" alt="Produk />';
-    }
-    echo '</div>';
-    echo '<div class="clearfix" style="margin-bottom:15px"></div>';
-}
-echo '<p>' . $product->prod_desc . '</p>';
-echo '</div>';
-echo '<div class="col-md-4">';
-echo '<div>';
-echo '<h2 style="margin: 0px 0px 5px 0px; padding: 0px 0px 0px 0px;color:#777"> Rp. ' . number_format($product->prod_price, 2) . '</h2>';
-echo '<b>&nbsp;<i class="fa fa-map-marker"></i>&nbsp;&nbsp;</b> ' . $product->prod_location . ' / <b>&nbsp;<i class="fa fa-magic"></i>&nbsp;&nbsp;</b>' . ($product->prod_status == 0 ? 'Baru' : ($product->prod_status == 1 ? 'Second' : 'Rekondisi'));
-echo '</div>';
-echo '<br />';
-echo '<div class="well">';
-echo '<h2 style="margin-top:0px;">Seller Info</h2>';
-echo '<b><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;Phone </b> ' . $product->first_name . ' / ' . ($product->company == "" ? 'Nama Perusahaan belum di isi' : $product->company);
-echo '<br />';
-echo '<b><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;Phone </b> ' . ($product->phone == "" ? 'Telp. belum di isi' : $product->phone);
-echo '<br />';
-echo '<b><i class="fa fa-building"></i>&nbsp;&nbsp;&nbsp;Address </b> ' . ($product->address == "" ? 'Alamat belum di isi' : $product->address);
-echo '<br />';
-echo '<br />';
-echo '<p>' . ($product->company_desc == "" ? 'Deskripsi Perusahaan Belum diisi' : $product->company_desc) . '</p>';
-echo '</div>';
-echo '</div>';
-echo '</div>';
-echo '<br />';
