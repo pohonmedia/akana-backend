@@ -86,8 +86,9 @@ class Articles_m extends CI_Model {
     }
 
     public function get_detail($field, $value) {
-        $sql = "SELECT MA.*";
+        $sql = "SELECT MA.*, MAC.ct_name";
         $sql .= " FROM md_articles MA ";
+        $sql .= " JOIN md_articles_cat MAC ON MAC.id = MA.art_cat_id ";
         $sql .= "WHERE " . $field . " = ? ";
         $sql .= "ORDER BY MA.id";
 
@@ -123,8 +124,18 @@ class Articles_m extends CI_Model {
         return $this->db->affected_rows();
     }
 
-    public function get_featured() {
-        return array();
+    public function get_featured($category_id) {
+        $sql = "SELECT MA.*";
+        $sql .= " FROM md_articles MA ";
+        $sql .= "WHERE MA.art_is_feature = 1 AND MA.art_cat_id = " . $category_id . " ";
+        $sql .= "ORDER BY MA.id";
+
+        $query = $this->db->query($sql);
+        if ($query->num_rows() == 0) {
+            return false;
+        }
+
+        return $query->result();
     }
 
     // WIDGETS MODEL

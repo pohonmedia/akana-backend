@@ -8,23 +8,17 @@ class Main extends Public_Controller {
 
     function __construct() {
         parent::__construct();
+        $this->load->model('Main_m');
+        $this->_db = $this->Main_m;
     }
 
     public function index() {
         $this->set_title('Beranda');
 
-        if ($this->config->item('show_sliders') == 'true') {
-            $this->data['sliders'] = Modules::run('sliders/get_all');
-            $this->template->set_partial('sliders', 'sliders/index', $this->data);
-        }
-        if ($this->config->item('show_featured_catalogs') == 'true') {
-            $this->data['latest'] = Modules::run('catalogs/get_featured');
-            $this->template->set_partial('featured', 'catalogs/featured', $this->data);
-        }
-//        if ($this->config->item('show_featured_articles') == 'true') {
-//            $data['featured'] = Modules::run('articles/controller/get_featured');
-//            $this->template->set_partial('featured', 'articles/featured', $data);
-//        }
+        $this->data['app_home'] = $this->_db->get_homepage();
+        $this->data['sliders'] = Modules::run('sliders/get_all');
+        $this->data['our_services'] = Modules::run('articles/get_featured', 1);
+        $this->data['tour_packages'] = Modules::run('catalogs/get_featured');
 
         $this->template->build('index', $this->data);
     }

@@ -13,17 +13,16 @@
 			<!-- title end here -->
 			<!-- card Looping start here -->
 			<?php
-				if(isset($ourservice) && $ourservice != null) {
-					foreach ($ourservice as $key => $value) {
+				if(isset($our_services) && $our_services != null) {
+					foreach ($our_services as $key => $value) {
 						echo '<div class="col-lg-4 col-md-4 d-flex justify-content-center text-center">';
-						echo '<div class="card c-card">';
 						echo '<div class="card c-card">';
 						echo '<div class="card-body">';
 						echo '<i class="fas fa-suitcase"></i>';
 						echo '<h5 class="card-title">' . $value->art_title. '</h5>';
 						echo '<p class="card-text">';
-						echo $value->art_content;
-						echo '<a href="' . $value->art_slug. '" class="btn btn-link stretched-link">lihat detail</a>';
+						echo character_limiter(strip_tags($value->art_content), 250);
+						echo '<br /><br /><a href="' . base_url() . 'articles/read/' . $value->art_slug. '" class="btn btn-link stretched-link">lihat detail</a>';
 						echo '</div>';
 						echo '</div>';
 						echo '</div>';
@@ -52,9 +51,9 @@
 				Tour Packages
 			</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+				<?php echo $app_home->desc_section1; ?>
 			</p>
-			<a href="#" class="btn btn-outline-success btn--primary d-block" style="letter-spacing:2px; ">See More Packages</a>
+			<a href="<?php echo $app_home->link_section1; ?>" class="btn btn-outline-success btn--primary d-block" style="letter-spacing:2px; ">See More Packages</a>
 		</div>
 		<!-- Tour Description end here -->
 
@@ -66,38 +65,41 @@
 				<!-- Additional required wrapper -->
 				<div class="swiper-wrapper">
 					<?php
-						if(isset($tourpackages) && $tourpackages != null) {
-							foreach ($tourpackages as $key => $value) {
-								echo 'Tour Packages';
-							}
-						}
+						if(isset($tour_packages) && $tour_packages != null) {
+							foreach ($tour_packages as $key => $value) {
 					?>
-					<!-- Slides -->
-					<!-- <div class="swiper-slide">
+					
+					<div class="swiper-slide">
 						<div class="col">
 							<div class="card c-card-product">
-								<img src="<?php //echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
+								<img src="<?php echo $theme_assets . 'img/dest--2.jpg'; ?>" class="card-img-top" alt="card image">
 								<div class="card-body">
 									<h5 class="card-title">
-										Borobudur trip 1
+										<?php echo $value->prod_name; ?>
 									</h5>
 									<p class="card-text text-capitalize">
 										<span class="c-card-date mt-2 mb-2">
 											<i class="far fa-calendar-alt pr-2"></i>
-											3 Days 2 Night
+											<?php echo $value->prod_duration_day; ?> Days <?php echo $value->prod_duration_night; ?> Night
 										</span>
 										<span class="c-card-dest">
 											<i class="fas fa-map-marker-alt pr-2"></i>
-											yogyakarta - magelang
+											<?php echo $value->prod_location; ?>
 										</span>
 									</p>
-									<a href="/package-detail.html" class="btn btn-primary btn-block btn--primary">
+									<a href="<?php echo base_url('catalogs/product/' . $value->id); ?>" class="btn btn-primary btn-block btn--primary">
 										packages detail
 									</a>
 								</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
+					
+					<?php			
+							}
+						}
+					?>
+					<!-- Slides -->
 
 				</div>
 			</div>
@@ -152,9 +154,8 @@
 				<h2>
 					our destination
 				</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
-				<a href="/destination-list.html" class="btn btn-outline-success btn--secondary" style="letter-spacing:2px; width:80%;">More destination</a>
+				<?php echo $app_home->desc_section2; ?>
+				<a href="<?php echo $app_home->link_section2; ?>" class="btn btn-outline-success btn--secondary" style="letter-spacing:2px; width:80%;">More destination</a>
 			</div>
 			<!-- destination description end here -->
 		</div>
@@ -174,9 +175,9 @@
 				mice Packages
 			</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+			<?php echo $app_home->desc_section3; ?>
 			</p>
-			<a href="/mice-list.html" class="btn btn-outline-success btn--primary d-block" style="letter-spacing:2px; ">See More Packages</a>
+			<a href="<?php echo $app_home->link_section3; ?>" class="btn btn-outline-success btn--primary d-block" style="letter-spacing:2px; ">See More Packages</a>
 		</div>
 		<!-- mice Description end here -->
 
@@ -229,8 +230,8 @@
 	<div class="col-lg-4 c-wording d-flex align-items-center justify-content-center">
 		<div>
 			<h5>our recent works</h5>
-			<p class="pb-2 pt-2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-			<a href="#" class="btn btn-primary btn-block btn--secondary">
+			<?php echo $app_home->desc_section4; ?>
+			<a href="<?php echo $app_home->desc_section4; ?>" class="btn btn-primary btn-block btn--secondary">
 				see more
 			</a>
 		</div>

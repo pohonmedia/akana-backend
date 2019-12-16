@@ -22,4 +22,19 @@ class Main_m extends CI_Model {
         $this->user = $this->ion_auth->user()->row();
     }
 
+
+    public function get_homepage() {
+        $sql = "SELECT DH.*";
+        $sql .= " FROM dt_homepage DH ";
+        $sql .= "WHERE id = ? ";
+        $sql .= "ORDER BY DH.id";
+
+        $query = $this->db->query($sql, array(1));
+        if ($query->num_rows() == 0) {
+            return false;
+        }
+
+        return $query->row();
+    }
+
 }

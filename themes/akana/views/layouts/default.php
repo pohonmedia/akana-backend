@@ -76,7 +76,7 @@
   <!-- carousel start here -->
 <!-- Sliders -->
 <?php
-    $sliders = Modules::run('sliders/controller/get_all');
+    // $sliders = Modules::run('sliders/controller/get_all');
 		if ($this->uri->uri_string() == "" && !empty($sliders)) {
 ?>
             <!-- Header Carousel -->
