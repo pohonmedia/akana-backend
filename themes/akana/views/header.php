@@ -1,26 +1,26 @@
 <!-- Navigation -->
    <!-- Navigation start here -->
-    <nav class="navbar navbar-expand-lg navbar-dark" id="navbarMain">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>">
-        <img src="<?php echo $theme_assets . 'img/logo--new.png'; ?>" width="60" height="60" alt="<?php echo $this->config->item('website_name'); ?>" class="img-fluid">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <?php
-                if (!empty($template['partials']['top_menu'])) {
-                    echo $template['partials']['top_menu'];
-                } else {
-                    echo '<div class="collapse navbar-collapse" id="navbarSupportedContent">';
-                    echo '<ul class="navbar-nav mr-auto">';
-                    echo '<li class="nav-item"><a href="' . base_url() . '">Home</a></li>';
-                    echo '</ul>';
-                    echo '<form class="form-inline my-2 my-lg-0">';
-                    echo '<button class="btn btn-outline-success my-2 my-sm-0 btn--primary" id="contact">Contact Us</button>';
-                    echo '</form>';
-                    echo '</div>';
-                }
-        ?>
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbarMain">
+    <a class="navbar-brand" href="<?php echo base_url(); ?>">
+    <img src="<?php echo $theme_assets . 'img/logo--new.png'; ?>" width="60" height="60" alt="<?php echo $this->config->item('website_name'); ?>" class="img-fluid">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <?php
+            if (!empty($template['partials']['top_menu'])) {
+                echo $template['partials']['top_menu'];
+            } else {
+                echo '<div class="collapse navbar-collapse" id="navbarSupportedContent">';
+                echo '<ul class="navbar-nav mr-auto">';
+                echo '<li class="nav-item"><a href="' . base_url() . '">Home</a></li>';
+                echo '</ul>';
+                echo '<form class="form-inline my-2 my-lg-0">';
+                echo '<button class="btn btn-outline-success my-2 my-sm-0 btn--primary" id="contact">Contact Us</button>';
+                echo '</form>';
+                echo '</div>';
+            }
+    ?>
 </nav>
 <!-- Navigation end here -->
 
